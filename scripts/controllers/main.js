@@ -6,6 +6,45 @@
 
 'use strict';
 
+function mkColour(r, g, b){
+  return {
+			    x: 0,
+			    y: 0,
+			    r: r,
+			    g: g,
+			    b: b
+			};
+}
+
+var initColours = [ mkColour(168,22,6)
+                  , mkColour(136,14,19)
+                  , mkColour(236,175,125)
+                  , mkColour(245,216,12)
+                  , mkColour(240,227,17)
+                  , mkColour(187,132,44)
+
+                  , mkColour(186,41,11)
+                  , mkColour(193,111,48)
+                  , mkColour(199,69,32)
+                  , mkColour(110,27,1)
+                  , mkColour(97,66,47)
+                  , mkColour(98,40,17)
+
+                  , mkColour(226,228,228)
+                  , mkColour(19,17,115)
+                  , mkColour(25,17,90)
+                  , mkColour(43,75,160)
+                  , mkColour(15,71,133)
+                  , mkColour(42,19,7)
+
+                  , mkColour(91,78,62)
+                  , mkColour(21,39,51)
+                  , mkColour(46,46,43)
+                  , mkColour(38,126,46)
+                  , mkColour(35,137,90)
+                  , mkColour(63,81,63)
+                  ];
+
 /**
  * @ngdoc function
  * @name pbnApp.controller:MainCtrl
@@ -22,7 +61,7 @@ angular.module('pbnApp')
       $scope.loaderStyle = {
   	  border: "4px dashed #777777"
       };
-      $scope.palette = [];
+      $scope.palette = initColours;
       $scope.colorInfoVisible = false;
 
       $scope.imageLoaded = function(imgSrc) {
